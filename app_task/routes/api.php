@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Criando Rotas Api
+
+Route::resource('departamento','App\Http\Controllers\DepartamentoController');
+Route::resource('funcionario','App\Http\Controllers\FuncionarioController');
+Route::resource('Tarefa','App\Http\Controllers\TarefaController');
